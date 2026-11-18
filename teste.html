@@ -1,11 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 1090px;
+            border-collapse: collapse ;
+            position: relative;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead, tfoot {
+            background-color: rgb(238, 234, 234);
+            color: rgb(12, 12, 12);
+        }
+
+        thead > tr > th {
+            
+            position: sticky; /* grudar */
+            top: 0; /* na posição 0 */
+            background-color: rgb(245, 243, 243);
+
+        }
+        td.num {
+            text-align: right;
+        }
+        td.esquerda {
+            text-align: left;
+        }
+        caption {
+            /* Tamanho da fonte */
+            font-size: 1.5em;
+            /* Para colocar em negrito */
+            font-weight: bold;
+            /* Para deixar mais espaçado */
+            padding: 20px;
+            /* Colocar um fundo no meu caption */
+            background-color: lightgray;
+
+        }
+        
+        tbody > tr:nth-child(2n) {
+            background-color: rgb(243, 241, 241);
+
+        }
+    </style>
 </head>
 <body>
-    
+       <!-- Anatomia para tabelas grandes 
+        Table
+            Caption - Legenda da tabela
+            Thead - cabeça
+                TR, TD, TH
+            Tbody - corpo
+                TR, TD, TH
+            Tfoot - pé 
+                TR, TD, TH
+    -->
+    <table>
+        <caption>
+            População dos Estados brasileiros em 2024
+        </caption>
+        <thead>
+            <tr>
+                <!-- Importante colocar o Escopo do título 
+                    col - colunas
+                    row - linhas 
+                -->
+                <th scope="col" style="width: 800px">Estado</th>
+                <th scope="col" style="width: 800px">População</th>
+                <th scope="col" style="width: 800px">Comando HTML Utilizado</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td> <b>Acre </b></td>
+                <td class="num"><mark>830.018</mark></td>
+                <td class="esquerda"> <b>'Negrito'</b> e <mark>'Destacado'</mark></td>
+            </tr>
+            <tr>
+                <td> <em>Alagoas</em></td>
+                <td class="num">3.365.351</td>
+                <td class="esquerda"> <em>'Itálico'</em></td>
+            </tr>
+            <tr>
+                <td> <u> Amapá </u></td>
+                <td class="num">877.613</td>
+                <td class="esquerda"> ' <u>texto sublinhado</u>'</td>
+            </tr>
+            <tr>
+                <td><s>Amazonas</s></td>
+                <td class="num">4.269.995</td>
+                <td class="esquerda"><s>'Texto riscado'</s> e <u>'Texto sublinhado'</u></td>
+            </tr>
+            <tr>
+                <td> <sup> Bahia </sup></td>
+                <td class="num">14.141.626</td>
+                <td class="esquerda"><sup>  sobrescrito 'Texto'</sup></td>
+            </tr>
+            <tr>
+                <td>CE</td>
+                <td class="num">9.240.580</td>
+                <td class="esquerda">'Abreviação'</td>
+            </tr>
+        </tbody>
+         <tr>
+                <td> <strong>Distrito Federal</strong></td>
+                <td class="num">3.098.883</td>
+                <td class="esquerda"><strong>'Texto em negrito'</strong></td>
+            </tr>
+            <tr>
+                <td><q>"Espirito Santo"</q></td>
+                <td class="num">4.108.508</td>
+                <td class="esquerda"><q>Citação curta</q></td>
+            </tr>
+        </tbody>
+         <tr>
+                <td><cite>Goiás</cite></td>
+                <td class="num">7.206.589</td>
+                <td class="esquerda"><cite>Citação de fonte</cite></td>
+            </tr>
+            <tr>
+                
+                <td><code>Maranhão</code></td>
+                <td class="num">6.775.805</td>
+                <td class="esquerda"><code>Texto monoespaçado</code></td>
+            </tr>
+        </tbody>
+         <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.658.813</td>
+                <td class="esquerda"><pre>Texto pré-formatado</pre></td>
+            </tr>
+            <tr>
+                <td><small>Paraíba</small></td>
+                <td class="num">4.059.905</td>
+                <td class="esquerda"> <small>Texto pequeno</small></td>
+            </tr>
+        </tbody>
+         <tr>
+                <td><sub>Piauí</sub></td>
+                <td class="num">3.281.480</td>
+                <td class="esquerda"><sub>Texto subscrito</sub></td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16.054.524</td>
+                <td class="esquerda"><blockquote>'Citação em bloco'</blockquote></td>
+            </tr>
+            <tr>
+                <td><b>Rio Grande do Sul</b></td>
+                <td class="num">10.882.965</td>
+                <td class="esquerda"><strong>'Negrito' </strong></td>
+            </tr>
+            
+            <tr>
+                <td><i>Rondônia</i></td>
+                <td class="num">1.616.379</td>
+                <td class="esquerda"><em>'Itálico'</em></td>
+            </tr>
+            
+            <tr>
+                <td> <mark>  Roraima </mark>  </td>
+                <td class="num">636.707</td>
+                <td class="esquerda"> <mark>'Texto destacado'</mark></td>
+            </tr>
+            
+            <tr>
+                <td>TO </td>
+                <td class="num">1.607.363</td>
+                <td >'Abreviação'</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>122.420.654</strong></td>
+                <td class="num"><strong> Realizar a soma das colunas</strong></td>
+            </tr>
+        </tfoot>
+        
+    </table>
+        
 </body>
 </html>
